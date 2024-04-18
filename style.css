@@ -1,0 +1,369 @@
+/* link of selected google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* this we are predefinig, so that we cannot write same code again & again*/
+
+/* this section already mentioned all color which we use, just we need write these color names where we want color */
+:root{
+    --primary-text-color: #183b56;
+    --secondar-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-text-color);
+}
+
+/* h1 tag styling */
+h1{
+    font-size: 3rem;
+
+}
+
+/* h2 tag styling */
+h2{
+    font-size: 2rem;
+}
+
+/* h3 tag styling */
+h3{
+    font-size: 1.5rem;
+}
+
+/* paragraph tag styling */
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: var(--secondar-text-color);
+    line-height: 1.8rem;
+}
+
+/* anchor tag tag styling */
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+}
+
+
+/* utility class - means which is used in many sections as per requirrement */
+.small-bold-text{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.container{
+    /* This sets the maximum width of the container to 1180 pixels.  */
+    max-width: 1180px;
+    /* This centers the container horizontally within its containing element by setting the left and right margins to auto. */
+    margin-inline: auto;
+    /* This sets the inline (horizontal) padding of the container.  */
+    padding-inline: var(--padding-inline-section);
+}
+
+/* flex for eveyone whhich mentions flex class  */
+.flex{ 
+    display: flex;
+    align-items: center;
+}
+
+/* these buttons format is used many where, so we can use it as in class of that format */
+.primary-button{
+    background-color: var(--accent-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondar-text-color);
+    transition: 0.2s ease-out;
+}
+.primary-button:hover{
+    background-color: var(--accent-color-dark);
+
+}
+
+.secondary-button{
+    border: 0.5px solid var(--secondar-text-color);
+    border-radius: 6px;
+    font-weight: 700;
+    color: var(--primary-text-color) !important;
+    /* this padidng gives size from top & bottom and left & right */
+    padding: 12px 24px;
+    transition: 0.2s ease-out;
+}
+.secondary-button:hover{
+    /* if when we hover just border color changes */
+    border-color: var(--accent-color);
+    color: var(--accent-color) !important;
+}
+
+
+
+/* website designing starts from here */
+
+/* top banner section */
+
+.top-banner{
+    background-color: #e74694;
+    background-image: url(banner\ bg.png);
+    background-size: 300px;
+    background-repeat: repeat;    
+}
+
+.banner-text{
+    color: white;
+    /* from top and bottom 15px and from L and R 30px */
+    padding: 15px 30px;
+    text-align: center;
+}
+
+
+
+/* Navbar section */
+
+.main-nav{
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.company-logo img{
+    width: 220px;
+    margin-left: 180px;
+}
+
+.nav-links ul{
+    justify-content: end;
+    gap: 40px;
+    margin-right: 230px;
+    cursor: pointer;
+}
+
+.hover-links{
+    color: var(--primary-text-color);
+}
+
+.hover-links:hover{
+    color: var(--accent-color);
+}
+
+
+
+/* header section */
+
+header{
+    /* 50px - top & bottom, 0 - left & right*/
+    /*padding-inline-section =  defines the logical inline start and end padding of an element */
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.header-section{
+    justify-content: center;
+    /* it gives gap btw image and h1,p */
+    gap: 50px;
+}
+
+.header-left{
+    max-width: 40vw;
+}
+
+.header-right h1{
+    margin-top: 20px;
+}
+
+.getstarted{
+    margin-top: 20px;
+}
+
+/* width to image */
+.header-right img{
+    width: 600px;
+}
+
+
+/* companies section */
+
+.companies-header{
+    text-align: center;
+    /* margin-block is used give distance from top and bottom */
+    margin-block: 30px;
+    color: var(--primary-text-color);
+}
+
+.logos{
+    justify-content: space-between;
+    /* flex-wrap: wrap = property sets whether flex items are forced onto one line or can wrap onto multiple lines. if we deacrease
+    size of window then whatever inside wrap present it will adjust to next line*/
+    flex-wrap: wrap;
+}
+
+.logo{
+    height: 45px;
+}
+
+
+/* features section */
+
+.features-section{
+    /* 80px =top, var = left-right, 0 = right */
+    padding: 80px var(--padding-inline-section) 0;
+    background-image: url(background.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.features-header{
+    text-align: center;
+}
+
+.features-header h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.features-area{
+    /* this is used, so that max-width features-card can take */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 25px;
+}
+
+.features-card{
+    flex-direction: column;
+    gap: 15px;
+    /* by doing 30% max-width they are divided into two rows with three each column */
+    max-width: 25%;
+    text-align: center;
+
+}
+
+.features-card img{
+    /* giving size to logo */
+    width: 42px;
+}
+
+
+/* big-feature-section-1,2,3 */
+
+.big-feature-section{
+    padding: 30px var(--padding-inline-section) 0;
+    margin-top: 50px;
+}
+
+.big-feature-container{
+    gap: 30px;
+}
+
+.feature-image img{
+    /* reduces image size, which is equal to its parent(big-feature-section) section */
+    width: 100%;
+}
+
+.feature-desc{
+    /* doing column we all wriiten in one row, will covert into three columns */
+    flex-direction: column;
+    /* flex-starts means all things are writing from starting */
+    align-items: flex-start;
+}
+
+
+/* example section */
+
+.example-header{
+    flex-direction: column;
+    margin-top: 150px;
+    gap: 20px;
+}
+
+.example-header h2{
+    font-size: 25px;
+}
+
+.example-card{
+    width: 23%;
+    position: relative;
+    min-height: 300px;
+    background: black;
+    /* if in some case linear-gradient does not work then above mentioned bg - Black will work */
+    background: linear-gradient(rgb(0, 0, 0, 0.1), rgb(0, 0, 0, 0.8)), url(bg1.jpg);
+    background-size: cover;
+}
+
+.example-area{
+    justify-content: space-between;
+    /* margin from top and bottom */
+    margin-block: 30px;
+}
+
+.card-text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+}
+
+
+/* CTA-section */
+
+.cta-section{
+    /* 120px - from top  and 80px - from bottom */
+    padding: 120px var(--padding-inline-section) 80px;
+    background-color: #183b54;
+}
+
+.cta-container{
+    /* if every thing present in same it brings in column wise one below another */
+    flex-direction: column;
+    gap: 50px;
+    color: white;
+}
+
+.cta-container p{
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* footer section */
+
+footer{
+    padding-block: 80px;
+    background-color: #ebf2fa;
+}
+
+.link-column{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-container{
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* subfooter section */
+
+.subfooter{
+    background-color: #b9cde4;
+    padding: var(--padding-inline-section);
+}
+
+.subfooter-container{
+    justify-content: center;
+    gap: 30px;
+}
